@@ -16,9 +16,13 @@
     "start": "npm run start --prefix backend",
     "test": "npm test --prefix backend",
     "lint": "npm run lint --prefix backend && npm run lint --prefix frontend",
-    "typecheck": "npm run typecheck --prefix backend && npm run typecheck --prefix frontend"
+    "lint:fix": "npm run lint:fix --prefix backend && npm run lint:fix --prefix frontend",
+    "typecheck": "npm run typecheck --prefix backend && npm run typecheck --prefix frontend",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "concurrently": "^10.0.5"
+    "concurrently": "^10.0.5",
+    "prettier": "^3.9.6"
   }
 }

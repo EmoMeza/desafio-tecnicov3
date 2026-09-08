@@ -41,13 +41,16 @@ cp frontend/.env.example frontend/.env
 
 ### Scripts de la raíz
 
-| Script              | Efecto                                             |
-| ------------------- | ------------------------------------------------- |
-| `npm run dev`       | Backend + frontend en paralelo                    |
-| `npm run build`     | Build de ambos                                    |
-| `npm test`          | Tests del backend                                 |
-| `npm run lint`      | Lint de ambos                                     |
-| `npm run typecheck` | `tsc` de ambos                                    |
+| Script                 | Efecto                                    |
+| ---------------------- | ----------------------------------------- |
+| `npm run dev`          | Backend + frontend en paralelo            |
+| `npm run build`        | Build de ambos                            |
+| `npm test`             | Tests del backend                         |
+| `npm run lint`         | ESLint en ambos                           |
+| `npm run lint:fix`     | ESLint con `--fix` en ambos               |
+| `npm run typecheck`    | `tsc` de ambos                            |
+| `npm run format`       | Prettier `--write` en todo el repo        |
+| `npm run format:check` | Prettier `--check` (sin escribir)         |
 
 ## Estado
 

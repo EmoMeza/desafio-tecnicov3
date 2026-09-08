@@ -7,6 +7,7 @@ import { logger } from './lib/logger.js';
 import { errorHandler } from './middlewares/error-handler.js';
 import { notFoundHandler } from './middlewares/not-found.js';
 import { healthRoutes } from './routes/health.routes.js';
+import { scoreRoutes } from './routes/score.routes.js';
 
 /**
  * Crea y configura la instancia de Express (sin `listen`), de forma que pueda
@@ -21,6 +22,7 @@ export function createApp(): Express {
   app.use(pinoHttp({ logger }));
 
   app.use('/health', healthRoutes);
+  app.use('/score', scoreRoutes);
 
   app.use(notFoundHandler);
   app.use(errorHandler);

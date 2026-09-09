@@ -5,6 +5,8 @@ export interface AuthContextValue {
   user: AuthUser | null;
   token: string | null;
   isAuthenticated: boolean;
+  /** `true` cuando la sesión se cerró por un 401 (token expirado o inválido). */
+  sessionExpired: boolean;
   /** Autentica contra `POST /login` y persiste la sesión. Propaga `ApiError`. */
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;

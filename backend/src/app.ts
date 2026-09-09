@@ -6,6 +6,7 @@ import { config } from './config/index.js';
 import { logger } from './lib/logger.js';
 import { errorHandler } from './middlewares/error-handler.js';
 import { notFoundHandler } from './middlewares/not-found.js';
+import { authRoutes } from './routes/auth.routes.js';
 import { healthRoutes } from './routes/health.routes.js';
 import { scoreRoutes } from './routes/score.routes.js';
 
@@ -22,6 +23,7 @@ export function createApp(): Express {
   app.use(pinoHttp({ logger }));
 
   app.use('/health', healthRoutes);
+  app.use('/login', authRoutes);
   app.use('/score', scoreRoutes);
 
   app.use(notFoundHandler);

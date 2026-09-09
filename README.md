@@ -1,5 +1,7 @@
 # Consulta de Riesgo Financiero
 
+[![CI](https://github.com/EmoMeza/desafio-tecnicov3/actions/workflows/ci.yml/badge.svg)](https://github.com/EmoMeza/desafio-tecnicov3/actions/workflows/ci.yml)
+
 MVP de consulta de riesgo crediticio: una **API REST** (Node.js + TypeScript) con
 autenticación JWT y autorización por roles, y una **SPA** (React + TypeScript) para
 iniciar sesión y consultar el score financiero de un RUT.

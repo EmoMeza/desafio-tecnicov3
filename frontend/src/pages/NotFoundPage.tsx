@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 
 export function NotFoundPage() {
   return (
-    <section className="max-w-md">
+    <section className="mx-auto my-auto w-full max-w-md py-12">
       <p className="font-mono text-[44px] leading-none text-ink-soft">404</p>
       <h1 className="mt-4 text-[22px] font-semibold tracking-tight">No encontramos esta página</h1>
       <p className="mt-2 text-ink-soft">

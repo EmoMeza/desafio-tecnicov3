@@ -51,7 +51,7 @@ export function LoginPage() {
   }
 
   return (
-    <section className="max-w-sm">
+    <section className="mx-auto my-auto w-full max-w-sm py-12">
       <h1 className="text-[26px] font-semibold tracking-tight">Iniciar sesión</h1>
       <p className="mt-2 text-ink-soft">Consulta el score financiero de un RUT.</p>
 

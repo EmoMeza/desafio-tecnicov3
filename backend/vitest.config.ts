@@ -11,5 +11,23 @@ export default defineConfig({
       JWT_EXPIRES_IN: '15m',
       CORS_ORIGIN: 'http://localhost:5173',
     },
+    coverage: {
+      provider: 'v8',
+      include: ['src/**/*.ts'],
+      exclude: [
+        'src/**/*.test.ts',
+        'src/test/**',
+        'src/server.ts', // bootstrap (listen + señales), se prueba a mano
+        'src/config/**', // carga de env con efecto colateral process.exit
+        'src/lib/logger.ts', // configuración de pino
+        'src/types/**',
+      ],
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 80,
+        statements: 80,
+      },
+    },
   },
 });
